@@ -29,7 +29,7 @@ def detect_pose():
     def point_to_line_distance(px, py, x1, y1, x2, y2):
         num = abs((x2 - x1) * (y1 - py) - (x1 - px) * (y2 - y1))
         den = distance(x1, y1, x2, y2)
-        return num / den if den != 0 else float('inf')
+        return num / den if den != 0 else float('int')
 
     while cap.isOpened():
         ret, frame = cap.read()
